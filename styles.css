@@ -374,4 +374,67 @@ header {
     flex-direction: column;
   }
 }
+/* Customer Reviews Section */
+.reviews-section {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.reviews-container {
+  max-width: 900px;
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.reviews-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #4b3f2f;
+  margin-bottom: 2rem;
+}
+
+.review-card {
+  background-color: #f6f1e7;
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #9c7c4d;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.review-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #4b3f2f;
+}
+
+.review-date {
+  font-size: 0.9rem;
+  color: #7c6a50;
+}
+
+.review-text {
+  font-size: 1rem;
+  color: #5c4b35;
+  margin-top: 0.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
 
