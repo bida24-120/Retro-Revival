@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Feedback - Retro Revival</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1 class="store-name">Retro Revival</h1>
+      <p class="motto">Sustainable Style, Timeless Finds</p>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="feedback.html">Customer Reviews</a></li>
+        <li><a href="#"><img src="cart-icon.png" alt="Cart" class="cart-icon" /></a></li>
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="feedback-section">
+    <div class="feedback-container">
+      <div class="feedback-info">
+        <h2>We Value Your Feedback!</h2>
+        <p>Your thoughts help us grow and serve you better. Tell us about your experience with Retro Revival.</p>
+      </div>
+
+      <form class="feedback-form" action="#" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="rating">Rating</label>
+        <select id="rating" name="rating" required>
+          <option value="">Select a rating</option>
+          <option value="5">★★★★★ - Excellent</option>
+          <option value="4">★★★★ - Good</option>
+          <option value="3">★★★ - Average</option>
+          <option value="2">★★ - Poor</option>
+          <option value="1">★ - Very Poor</option>
+        </select>
+
+        <label for="message">Your Feedback</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
