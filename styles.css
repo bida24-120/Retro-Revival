@@ -68,29 +68,43 @@ header {
 
 /* Hero Section */
 .hero-section {
-  background-image: url('store-preview.jpg'); /* Replace with your image file */
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  padding: 2rem;
 }
 
-.hero-overlay {
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 2rem;
+.hero-container {
+  background-color: #fff;
   border-radius: 12px;
+  overflow: hidden;
+  max-width: 1000px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  flex: 1 1 300px;
+}
+
+.hero-text {
+  padding: 1.5rem;
+  flex: 1 1 300px;
   text-align: center;
 }
 
-.hero-overlay h2 {
+.hero-text h2 {
   font-size: 2rem;
   color: #4b3f2f;
+  margin-bottom: 0.5rem;
 }
 
-.hero-overlay p {
-  font-size: 1.2rem;
+.hero-text p {
+  font-size: 1.1rem;
   color: #5c4b35;
 }
