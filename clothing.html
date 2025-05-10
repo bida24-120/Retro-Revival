@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clothing & Accessories - Retro Revival</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1 class="store-name">Retro Revival</h1>
+      <p class="motto">Sustainable Style, Timeless Finds</p>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="reviews.html">Customer Reviews</a></li>
+        <li><a href="#"><img src="cart-icon.png" alt="Cart" class="cart-icon" /></a></li>
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="product-section">
+    <h2>Clothing & Accessories</h2>
+    <div class="product-grid" id="productGrid">
+      <!-- Product Cards -->
+      <!-- Sample product card -->
+      <!-- Repeat similar blocks with different IDs/images -->
+      <!-- Images must be placed in the images/ folder -->
+      <!-- We'll use JavaScript to calculate cart total -->
+    </div>
+
+    <div class="cart-summary">
+      <h3>Total: $<span id="cartTotal">0.00</span></h3>
+    </div>
+  </main>
+
+  <script>
+    const products = [
+      { id: 1, name: "Summer Dress", price: 65.00, stock: 5, image: "dress.02.jpg" },
+      { id: 2, name: "Vintage Dress", price: 56.50, stock: 10, image: "dress.05.jpg" },
+      { id: 3, name: "Vintage Dress", price: 68.75, stock: 7, image: "dress.04.jpg" },
+      { id: 4, name: "Men T-shirts", price: 31.99, stock: 15, image: "shirt.01.jpg" },
+      { id: 5, name: "Men shirts", price: 40.00, stock: 3, image: "shirt.02.jpg" },
+      { id: 6, name: "Men shirt", price: 45.50, stock: 8, image: "shirt.03.jpg" },
+      { id: 7, name: "Belt", price: 55.00, stock: 4, image: "access.12.jpg" },
+      { id: 8, name: "Sunglasses", price: 25.00, stock: 12, image: "access.04.jpg" },
+      { id: 9, name: "Sunglasses", price: 22.30, stock: 6, image: "access.03.jpg" },
+      { id: 10, name: "Watch", price: 28.00, stock: 10, image: "access.09.jpg" }
+    ];
+
+    const grid = document.getElementById('productGrid');
+    let cartTotal = 0;
+
+    products.forEach(product => {
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      card.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" />
+        <h4>${product.name}</h4>
+        <p>Price: $${product.price.toFixed(2)}</p>
+        <p>In Stock: ${product.stock}</p>
+        <button onclick="addToCart(${product.price})">Add to Cart</button>
+      `;
+      grid.appendChild(card);
+    });
+
+    function addToCart(price) {
+      cartTotal += price;
+      document.getElementById('cartTotal').innerText = cartTotal.toFixed(2);
+    }
+  </script>
+</body>
+</html>
