@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Books & Media - Retro Revival</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1 class="store-name">Retro Revival</h1>
+      <p class="motto">Sustainable Style, Timeless Finds</p>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="reviews.html">Customer Reviews</a></li>
+        <li><a href="cart.html"><img src="cart-icon.png" alt="Cart" class="cart-icon" /></a></li>
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="product-section">
+    <h2>Books & Media</h2>
+    <div class="product-grid" id="bookGrid"></div>
+
+    <div class="cart-summary">
+      <h3>Total: $<span id="cartTotal">0.00</span></h3>
+    </div>
+  </main>
+
+  <script>
+    const books = [
+      { id: 1, name: "Vintage Book: Gatsby", price: 10.00, stock: 4, image: "images/book1.jpg" },
+      { id: 2, name: "Classic Vinyl", price: 15.00, stock: 6, image: "images/book2.jpg" },
+      { id: 3, name: "Old Film Camera Manual", price: 8.50, stock: 3, image: "images/book3.jpg" },
+      { id: 4, name: "Retro Magazine", price: 5.00, stock: 8, image: "images/book4.jpg" },
+      { id: 5, name: "Audio Cassette", price: 7.25, stock: 5, image: "images/book5.jpg" },
+      { id: 6, name: "Hardcover Novel", price: 12.00, stock: 6, image: "images/book6.jpg" },
+      { id: 7, name: "Photography Book", price: 20.00, stock: 2, image: "images/book7.jpg" },
+      { id: 8, name: "Music CD", price: 9.75, stock: 10, image: "images/book8.jpg" },
+      { id: 9, name: "Rare Comic Book", price: 18.00, stock: 1, image: "images/book9.jpg" },
+      { id: 10, name: "Travel Guide (Retro)", price: 6.50, stock: 7, image: "images/book10.jpg" }
+    ];
+
+    const grid = document.getElementById('bookGrid');
+    let cartTotal = 0;
+
+    books.forEach(product => {
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      card.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" />
+        <h4>${product.name}</h4>
+        <p>Price: $${product.price.toFixed(2)}</p>
+        <p>In Stock: ${product.stock}</p>
+        <button onclick="addToCart(${product.price})">Add to Cart</button>
+      `;
+      grid.appendChild(card);
+    });
+
+    function addToCart(price) {
+      cartTotal += price;
+      document.getElementById('cartTotal').innerText = cartTotal.toFixed(2);
+    }
+  </script>
+</body>
+</html>
