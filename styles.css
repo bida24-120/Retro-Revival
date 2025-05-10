@@ -589,4 +589,80 @@ header {
     gap: 0.5rem;
   }
 }
+/* Donate Section */
+.donate-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.donate-container {
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.donate-container h2 {
+  text-align: center;
+  color: #4b3f2f;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.donate-info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #5c4b35;
+}
+
+.donate-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.donate-form label {
+  margin-top: 0.8rem;
+  font-weight: 500;
+  color: #4b3f2f;
+}
+
+.donate-form input,
+.donate-form select,
+.donate-form textarea {
+  padding: 0.6rem;
+  margin-top: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.donate-form textarea {
+  resize: vertical;
+}
+
+.donate-form button {
+  margin-top: 1.5rem;
+  padding: 0.7rem;
+  background-color: #9c7c4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.donate-form button:hover {
+  background-color: #7a623a;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .donate-container {
+    padding: 1.5rem;
+  }
+}
 
