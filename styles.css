@@ -291,3 +291,87 @@ header {
     flex-direction: column;
   }
 }
+/* Feedback Section */
+.feedback-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.feedback-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feedback-info {
+  flex: 1 1 300px;
+}
+
+.feedback-info h2 {
+  font-size: 2rem;
+  color: #4b3f2f;
+  margin-bottom: 1rem;
+}
+
+.feedback-info p {
+  font-size: 1.1rem;
+  color: #5c4b35;
+}
+
+/* Feedback Form */
+.feedback-form {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form label {
+  margin-top: 0.8rem;
+  font-weight: 500;
+  color: #4b3f2f;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  padding: 0.6rem;
+  margin-top: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+}
+
+.feedback-form button {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  background-color: #9c7c4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.feedback-form button:hover {
+  background-color: #7a623a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feedback-container {
+    flex-direction: column;
+  }
+}
+
