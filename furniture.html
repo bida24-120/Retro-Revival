@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Furniture & Decor - Retro Revival</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1 class="store-name">Retro Revival</h1>
+      <p class="motto">Sustainable Style, Timeless Finds</p>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="reviews.html">Customer Reviews</a></li>
+        <li><a href="cart.html"><img src="cart-icon.png" alt="Cart" class="cart-icon" /></a></li>
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="product-section">
+    <h2>Furniture & Home Decor</h2>
+    <div class="product-grid" id="furnitureGrid"></div>
+
+    <div class="cart-summary">
+      <h3>Total: $<span id="cartTotal">0.00</span></h3>
+    </div>
+  </main>
+
+  <script>
+    const furniture = [
+      { id: 1, name: "Vintage Coffee Table", price: 75.00, stock: 2, image: "bedroom.01.jpg" },
+      { id: 2, name: "Retro Lamp", price: 45.00, stock: 4, image: "bedroom.02.jpg" },
+      { id: 3, name: "Classic Armchair", price: 120.00, stock: 1, image: "bedroom.03.jpg" },
+      { id: 4, name: "Wooden Bookshelf", price: 90.00, stock: 3, image: "bedroom.04.jpg" },
+      { id: 5, name: "Decor Mirror", price: 35.00, stock: 5, image: "bedroom.05.jpg" },
+      { id: 6, name: "Antique Clock", price: 60.00, stock: 2, image: "bedroom.06.jpg" },
+      { id: 7, name: "Wall Art", price: 25.00, stock: 6, image: "bedroom.07.jpg" },
+      { id: 8, name: "Woven Basket", price: 18.50, stock: 7, image: "living.01.jpg" },
+      { id: 9, name: "Cushioned Ottoman", price: 48.00, stock: 2, image: "living.02.jpg" },
+      { id: 10, name: "Vintage Side Table", price: 55.00, stock: 3, image: "living.03.jpg" }
+    ];
+
+    const grid = document.getElementById('furnitureGrid');
+    let cartTotal = 0;
+
+    furniture.forEach(product => {
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      card.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" />
+        <h4>${product.name}</h4>
+        <p>Price: $${product.price.toFixed(2)}</p>
+        <p>In Stock: ${product.stock}</p>
+        <button onclick="addToCart(${product.price})">Add to Cart</button>
+      `;
+      grid.appendChild(card);
+    });
+
+    function addToCart(price) {
+      cartTotal += price;
+      document.getElementById('cartTotal').innerText = cartTotal.toFixed(2);
+    }
+  </script>
+</body>
+</html>
