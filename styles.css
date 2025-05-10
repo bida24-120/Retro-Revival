@@ -108,3 +108,48 @@ header {
   font-size: 1.1rem;
   color: #5c4b35;
 }
+/* About Us Section */
+.about-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.about-container {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 1000px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  flex: 1 1 300px;
+}
+
+.about-text {
+  flex: 1 1 300px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #4b3f2f;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #5c4b35;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
