@@ -1120,4 +1120,48 @@ header {
     font-size: 1.2rem;
   }
 }
+/* --- Consistent Footer Style --- */
+.footer {
+  background-color: #e0d6ba;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.95rem;
+  color: #4b3f2f;
+  border-top: 1px solid #ccc;
+  margin-top: 2rem;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+.footer a {
+  color: #4b3f2f;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #9c7c4d;
+}
+
+/* --- Responsive Footer --- */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+
+  .footer a {
+    display: inline-block;
+    margin: 0 4px;
+  }
+}
 
