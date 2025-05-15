@@ -3,27 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Feedback - Retro Revival</title>
+  <title>Customer Feedback - Retro Revival</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <div class="header-container">
-      <div class="logo-container">
-        <img src="bravo.jpg" alt="Retro Revival Logo" class="logo" />
-      </div>
       <h1 class="store-name">Retro Revival</h1>
       <p class="motto">Sustainable Style, Timeless Finds</p>
     </div>
     <nav class="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="categories.html">Products</a></li>
+        <li><a href="products.html">Products</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="donate.html">Donate</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
         <li><a href="reviews.html">Customer Reviews</a></li>
-        <li><a href="cart.html"><img src="cart.jpg" alt="Cart" class="cart-icon" /></a></li>
+        <li><a href="cart.html"><img src="cart.jpeg" alt="Cart" class="cart-icon" /></a></li>
         <li><a href="signin.html">Sign In</a></li>
         <li><a href="signup.html">Sign Up</a></li>
       </ul>
@@ -31,53 +29,35 @@
   </header>
 
   <main class="feedback-section">
-    <h2>We’d Love Your Feedback!</h2>
-    <form id="feedbackForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+    <div class="feedback-container">
+      <div class="feedback-info">
+        <h2>We Value Your Feedback!</h2>
+        <p>Your thoughts help us grow and serve you better. Tell us about your experience with Retro Revival.</p>
+      </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+      <form class="feedback-form" action="#" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
 
-      <label for="rating">Rate Your Experience (1–5):</label>
-      <select id="rating" name="rating" required>
-        <option value="">Select</option>
-        <option value="5">5 - Excellent</option>
-        <option value="4">4 - Good</option>
-        <option value="3">3 - Average</option>
-        <option value="2">2 - Poor</option>
-        <option value="1">1 - Very Poor</option>
-      </select>
+        <label for="rating">Rating</label>
+        <select id="rating" name="rating" required>
+          <option value="">Select a rating</option>
+          <option value="5">★★★★★ - Excellent</option>
+          <option value="4">★★★★ - Good</option>
+          <option value="3">★★★ - Average</option>
+          <option value="2">★★ - Poor</option>
+          <option value="1">★ - Very Poor</option>
+        </select>
 
-      <button type="submit">Submit Feedback</button>
-    </form>
+        <label for="message">Your Feedback</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-    <div id="thankYouMessage" class="thank-you hidden">
-      <h3>Thanks for your submission!</h3>
+        <button type="submit">Submit Feedback</button>
+      </form>
     </div>
   </main>
-
-  <footer class="footer">
-    <p>&copy; 2025 Retro Revival. All rights reserved.</p>
-    <p>Contact: info@retrorevival.com | Follow us on 
-      <a href="insta.jpeg">Instagram</a>, 
-      <a href="face.jpeg">Facebook</a>, 
-      <a href="twitter.jpeg">Twitter</a>
-    </p>
-  </footer>
-
-  <script>
-    const form = document.getElementById('feedbackForm');
-    const thankYouMessage = document.getElementById('thankYouMessage');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      form.reset();
-      thankYouMessage.classList.remove('hidden');
-    });
-  </script>
 </body>
 </html>
