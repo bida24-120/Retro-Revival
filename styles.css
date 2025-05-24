@@ -1164,4 +1164,35 @@ header {
     margin: 0 4px;
   }
 }
+/* Thank You Section */
+.thankyou-section {
+  max-width: 700px;
+  margin: 4rem auto;
+  text-align: center;
+  background-color: #fffaf0;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: #4b3f2f;
+}
+
+.thankyou-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.thankyou-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  color: #9c7c4d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
 
