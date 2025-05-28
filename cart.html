@@ -5,27 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cart - Retro Revival</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .cart-actions {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-
-    .clear-cart-btn {
-      background-color: #9c7c4d;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .clear-cart-btn:hover {
-      background-color: #c0392b;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -58,14 +37,12 @@
     <div class="cart-total">
       <h3>Total: $<span id="grandTotal">0.00</span></h3>
     </div>
-
-    <div class="cart-actions">
-      <button class="clear-cart-btn" id="clearCartBtn">Clear Cart</button>
-    </div>
   </main>
 
   <script>
+    // Read cart from localStorage
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
     const container = document.getElementById("cartContainer");
     const grandTotalDisplay = document.getElementById("grandTotal");
 
@@ -82,10 +59,8 @@
     }
 
     function buildCart() {
-      container.innerHTML = ""; // Clear previous content
       if (cartItems.length === 0) {
         container.innerHTML = "<p>Your cart is empty.</p>";
-        grandTotalDisplay.innerText = "0.00";
         return;
       }
 
@@ -103,12 +78,6 @@
 
       updateTotal();
     }
-
-    document.getElementById("clearCartBtn").addEventListener("click", () => {
-      localStorage.removeItem("cartItems");
-      container.innerHTML = "<p>Your cart is empty.</p>";
-      grandTotalDisplay.innerText = "0.00";
-    });
 
     buildCart();
   </script>
