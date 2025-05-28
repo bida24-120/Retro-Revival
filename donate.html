@@ -33,7 +33,7 @@
       <h2>Support the Retro Revival Movement</h2>
       <p class="donate-info">We accept quality donations in the following categories. Help us keep sustainable fashion alive!</p>
 
-      <form class="donate-form" action="#" method="post">
+      <form class="donate-form" id="donationForm">
         <label for="full-name">Full Name</label>
         <input type="text" id="full-name" name="full-name" required />
 
@@ -54,15 +54,28 @@
 
         <button type="submit">Submit Donation</button>
       </form>
+
+      <p id="thankYouMessage" class="thank-you-message" style="display:none;">
+        🎉 Thank you for your generous donation! We truly appreciate your support. 💛
+      </p>
     </div>
   </main>
-    <footer class="footer">
-  <p>&copy; 2025 Retro Revival. All rights reserved.</p>
-  <p>Contact: info@retrorevival.com | Follow us on 
-    <a href="https://www.instagram.com/">Instagram</a>, 
-    <a href="https://www.facebook.com/">Facebook</a>, 
-    <a href="https://x.com/">Twitter</a>
-  </p>
-</footer>
+
+  <footer class="footer">
+    <p>&copy; 2025 Retro Revival. All rights reserved.</p>
+    <p>Contact: info@retrorevival.com | Follow us on 
+      <a href="https://www.instagram.com/">Instagram</a>, 
+      <a href="https://www.facebook.com/">Facebook</a>, 
+      <a href="https://x.com/">Twitter</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("donationForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Stop form from submitting
+      document.getElementById("donationForm").reset(); // Reset form fields
+      document.getElementById("thankYouMessage").style.display = "block"; // Show message
+    });
+  </script>
 </body>
 </html>
