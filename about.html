@@ -13,6 +13,7 @@
       <p class="motto">Sustainable Style, Timeless Finds</p>
     </div>
     <nav class="navbar">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="products.html">Products</a></li>
@@ -53,6 +54,20 @@
     <a href="https://x.com/">Twitter</a>
   </p>
 </footer>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navUl = document.querySelector('.navbar ul');
+
+  menuToggle.addEventListener('click', () => {
+    navUl.classList.toggle('show');
+  });
+
+  navUl.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navUl.classList.remove('show');
+    });
+  });
+</script>
 
 </body>
 </html>
