@@ -36,6 +36,7 @@
 
     <div class="cart-total">
       <h3>Total: $<span id="grandTotal">0.00</span></h3>
+      <button id="checkoutBtn">Checkout</button>
     </div>
   </main>
 
@@ -78,6 +79,14 @@
 
       updateTotal();
     }
+
+    document.getElementById("checkoutBtn").addEventListener("click", () => {
+      if (cartItems.length === 0) {
+        alert("Your cart is empty!");
+      } else {
+        window.location.href = "checkout.html";
+      }
+    });
 
     buildCart();
   </script>
