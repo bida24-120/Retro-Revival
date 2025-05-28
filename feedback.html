@@ -35,7 +35,7 @@
         <p>Your thoughts help us grow and serve you better. Tell us about your experience with Retro Revival.</p>
       </div>
 
-      <form class="feedback-form" action="thankyou.html" method="post">
+      <form class="feedback-form" id="feedbackForm">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required />
 
@@ -57,6 +57,10 @@
 
         <button type="submit">Submit Feedback</button>
       </form>
+
+      <div id="thankYouMessage" style="display: none; margin-top: 1rem; color: green; font-weight: bold;">
+        Thank you for your feedback!
+      </div>
     </div>
   </main>
 
@@ -68,5 +72,17 @@
       <a href="https://x.com/">Twitter</a>
     </p>
   </footer>
+
+  <!-- JavaScript for thank-you message -->
+  <script>
+    const form = document.getElementById('feedbackForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent page reload
+      form.style.display = 'none'; // Hide form
+      thankYouMessage.style.display = 'block'; // Show thank-you message
+    });
+  </script>
 </body>
 </html>
