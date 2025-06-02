@@ -250,6 +250,12 @@ header {
     max-width: 100%;
   }
 }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 /* Contact Us Section */
 .contact-section {
   display: flex;
@@ -341,12 +347,21 @@ header {
   background-color: #7a623a;
 }
 
+/* Notification */
+.notification {
+  display: none;
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
   }
 }
+
 /* Feedback Section */
 .feedback-section {
   display: flex;
