@@ -31,7 +31,7 @@
   <main class="signin-section">
     <div class="signin-container">
       <h2>Welcome Back</h2>
-      <form class="signin-form" action="#" method="post">
+      <form class="signin-form" id="signinForm">
         <label for="email">Email Address</label>
         <input type="email" id="email" name="email" required />
 
@@ -48,16 +48,29 @@
 
         <button type="submit">Sign In</button>
       </form>
+
+      <p id="thankYouMessage" style="display: none; color: green; font-weight: bold; margin-top: 1rem;">
+        Thank you for signing in!
+      </p>
     </div>
   </main>
-    <footer class="footer">
-  <p>&copy; 2025 Retro Revival. All rights reserved.</p>
-  <p>Contact: info@retrorevival.com | Follow us on 
-    <a href="https://www.instagram.com/">Instagram</a>, 
-    <a href="https://www.facebook.com/">Facebook</a>, 
-    <a href="https://x.com/">Twitter</a>
-  </p>
-</footer>
 
+  <footer class="footer">
+    <p>&copy; 2025 Retro Revival. All rights reserved.</p>
+    <p>Contact: info@retrorevival.com | Follow us on 
+      <a href="https://www.instagram.com/">Instagram</a>, 
+      <a href="https://www.facebook.com/">Facebook</a>, 
+      <a href="https://x.com/">Twitter</a>
+    </p>
+  </footer>
+
+  <script>
+    // JavaScript to show the thank-you message
+    document.getElementById('signinForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent actual form submission
+      document.getElementById('thankYouMessage').style.display = 'block';
+      this.reset(); // Optional: clear form fields
+    });
+  </script>
 </body>
 </html>
