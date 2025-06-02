@@ -527,8 +527,7 @@ header {
   color: #4b3f2f;
 }
 
-.signup-form input,
-.signup-form select {
+.signup-form input {
   padding: 0.6rem;
   margin-top: 0.2rem;
   border: 1px solid #ccc;
