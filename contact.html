@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - Retro Revival</title>
-  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
@@ -19,7 +19,7 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="donate.html">Donate</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
+         <li><a href="feedback.html">Feedback</a></li>
         <li><a href="reviews.html">Customer Reviews</a></li>
         <li><a href="cart.html"><img src="cart.jpeg" alt="Cart" class="cart-icon" /></a></li>
         <li><a href="signin.html">Sign In</a></li>
@@ -40,7 +40,7 @@
         </ul>
       </div>
 
-      <form class="contact-form" id="contactForm">
+      <form class="contact-form" action="#" method="post">
         <h3>Send Us a Message</h3>
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required />
@@ -52,20 +52,17 @@
         <textarea id="message" name="message" rows="5" required></textarea>
 
         <button type="submit">Send Message</button>
-        <p class="notification" id="notification">Message sent successfully!</p>
       </form>
     </div>
   </main>
+   <footer class="footer">
+  <p>&copy; 2025 Retro Revival. All rights reserved.</p>
+  <p>Contact: info@retrorevival.com | Follow us on 
+    <a href="https://www.instagram.com/">Instagram</a>, 
+    <a href="https://www.facebook.com/">Facebook</a>, 
+    <a href="https://x.com/">Twitter</a>
+  </p>
+</footer>
 
-  <footer class="footer">
-    <p>&copy; 2025 Retro Revival. All rights reserved.</p>
-    <p>Contact: info@retrorevival.com | Follow us on 
-      <a href="https://www.instagram.com/">Instagram</a>, 
-      <a href="https://www.facebook.com/">Facebook</a>, 
-      <a href="https://x.com/">Twitter</a>
-    </p>
-  </footer>
-
-  <script src="contact.js"></script>
 </body>
 </html>
